@@ -14,6 +14,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 				tabBarLabel: 'Results',
 				tabBarIcon: ({ tintColor }) => {
 					return <Icon name='ios-filing' color={tintColor} size={24} />
+					// <Icon name='ios-archive' color={ tintColor } size={24} />
 				}
 			}
 		},
@@ -22,7 +23,10 @@ const TabNavigator = createMaterialTopTabNavigator(
 			navigationOptions: {
 				tabBarLabel: 'Order',
 				tabBarIcon: ({ tintColor }) => {
-					return <Icon name='ios-home' color={ tintColor } size={24} />
+					return <Icon name='ios-home' color={tintColor} size={24} />
+					// <Icon name='ios-add-circle-outline' color={ tintColor } size={24} />
+					// <Icon name='ios-create' color={ tintColor } size={24} />
+					// <Icon name='ios-pie' color={ tintColor } size={24} />
 				}
 			}
 		},
@@ -37,7 +41,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 		}
 	},
 	{
-		initialRouteName: 'Order',
+		initialRouteName: 'Results',
 		tabBarPosition: 'bottom',
 		tabBarOptions: {
 			activeTintColor: 'orange',
