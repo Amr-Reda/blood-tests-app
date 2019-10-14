@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, ScrollView } from 'react-native'
+import { Text, View, ScrollView, TouchableOpacity } from 'react-native'
 import { Header } from 'react-native-elements'
 import { Card } from 'react-native-elements'
 
@@ -52,68 +52,77 @@ const testNameTextStyle = { //TODO: add font
 
 const dividerStyle = { borderWidth: 1, borderColor: '#fff' }
 class ResultsScreen extends React.Component {
-
 	render() {
 		return (
 			<View style={{ flex: 1, justifyContent: 'center' }}>
 				<Header centerComponent={{ text: 'RESULTS', style: { color: '#fff' } }}></Header>
 				<View style={{ flex: 1 }}>
-					<ScrollView style={{ marginBottom:15 }}>
-						{ cards.map(card => {
+					<ScrollView style={{ marginBottom: 15 }}>
+						{cards.map(card => {
 							return (
-								<Card key={card.id}
-									containerStyle={cardStyle}
-									title={card.date}
-									dividerStyle={dividerStyle}
-									titleStyle={titleStyle}
+								<TouchableOpacity
+									key={card.id}
+									onPress={() => this.props.navigation.navigate('Details')}
 								>
-									<Text style={testNameTextStyle}>{card.test_name}</Text>
-									<View
-										style={{
-											flexDirection: 'row',
-											justifyContent: 'space-between'
-										}}
+									<Card
+										containerStyle={cardStyle}
+										title={card.date}
+										dividerStyle={dividerStyle}
+										titleStyle={titleStyle}
 									>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.result}
-										</Text>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.unit}
-										</Text>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.reference_interval}
-										</Text>
-									</View>
-								</Card>
+										<Text style={testNameTextStyle}>{card.test_name}</Text>
+										<View
+											style={{
+												flexDirection: 'row',
+												justifyContent: 'space-between'
+											}}
+										>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.result}
+											</Text>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.unit}
+											</Text>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.reference_interval}
+											</Text>
+										</View>
+									</Card>
+								</TouchableOpacity>
 							)
 						})}
 
-						{ cards.map(card => {
+						{cards.map(card => {
 							return (
-								<Card key={card.id}
-									containerStyle={cardStyle}
-									title={card.date}
-									dividerStyle={dividerStyle}
-									titleStyle={titleStyle}
+								<TouchableOpacity
+									key={card.id + 'a'}
+									onPress={() => this.props.navigation.navigate('Details')}
 								>
-									<Text style={testNameTextStyle}>{card.test_name}</Text>
-									<View
-										style={{
-											flexDirection: 'row',
-											justifyContent: 'space-between'
-										}}
+									<Card
+										containerStyle={cardStyle}
+										title={card.date}
+										dividerStyle={dividerStyle}
+										titleStyle={titleStyle}
 									>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.result}
-										</Text>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.unit}
-										</Text>
-										<Text style={{ fontSize: 16, color: 'grey' }}>
-											{card.reference_interval}
-										</Text>
-									</View>
-								</Card>
+										<Text style={testNameTextStyle}>{card.test_name}</Text>
+										<View
+											style={{
+												flexDirection: 'row',
+												justifyContent: 'space-between'
+											}}
+										>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.result}
+											</Text>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.unit}
+											</Text>
+											<Text style={{ fontSize: 16, color: 'grey' }}>
+												{card.reference_interval}
+											</Text>
+										</View>
+									</Card>
+								</TouchableOpacity>
 							)
 						})}
 					</ScrollView>
@@ -122,4 +131,5 @@ class ResultsScreen extends React.Component {
 		)
 	}
 }
+
 export default ResultsScreen
