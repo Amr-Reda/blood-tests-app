@@ -41,7 +41,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 		}
 	},
 	{
-		initialRouteName: 'Order',
+		initialRouteName: 'Tests',
 		tabBarPosition: 'bottom',
 		tabBarOptions: {
 			activeTintColor: 'orange',
