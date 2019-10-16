@@ -21,7 +21,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 		Order: {
 			screen: OrderScreen,
 			navigationOptions: {
-				tabBarLabel: 'Order',
+				tabBarLabel: 'Your Checks',
 				tabBarIcon: ({ tintColor }) => {
 					return <Icon name='ios-home' color={tintColor} size={24} />
 					// <Icon name='ios-add-circle-outline' color={ tintColor } size={24} />
@@ -33,7 +33,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 		Tests: {
 			screen: TestsScreen,
 			navigationOptions: {
-				tabBarLabel: 'Tests',
+				tabBarLabel: 'Labs',
 				tabBarIcon: ({ tintColor }) => {
 					return <Icon name='ios-flask' color={tintColor} size={24} />
 				}
@@ -41,7 +41,7 @@ const TabNavigator = createMaterialTopTabNavigator(
 		}
 	},
 	{
-		initialRouteName: 'Results',
+		initialRouteName: 'Order',
 		tabBarPosition: 'bottom',
 		tabBarOptions: {
 			activeTintColor: 'orange',

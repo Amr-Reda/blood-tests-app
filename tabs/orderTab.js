@@ -6,9 +6,10 @@ class OrderScreen extends React.Component {
 	render() {
 		return (
 			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-				<Header centerComponent={{ text: 'ORDER', style: { color: '#fff' } }}></Header>
+				<Header centerComponent={{ text: 'ORDERS', style: { color: '#fff' } }}></Header>
 				<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-					<Text>Order!</Text>
+					<Text style={{ fontSize: 20 }}>No checks reserved Now!</Text>
+					<Text style={{ fontSize: 15 }}>check our Labs!</Text>
 				</View>
 			</View>
 		)
